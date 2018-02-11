@@ -1,0 +1,57 @@
+.form
+	display flex
+	width 100%
+	flex-direction column
+	flex-shrink 0
+
+	&__input-group
+		width 100%
+		display flex
+		flex-direction column
+		margin-bottom 15px
+		&:last-child
+			margin-bottom 0
+		&_row
+			flex-direction row
+			+under(768)
+				flex-direction column
+
+
+
+	&__input
+		width 100%
+		height 40px
+		display flex
+		align-items center
+		flex-direction column
+		justify-content center
+		padding 3px 15px 2px
+		border 1px solid  #bababa
+		border-radius 10px
+		font sans-serif 16px 16px black
+		background transparent
+		margin 0
+		margin-bottom 15px
+		transition .3s
+		&:last-child
+			margin-bottom 0
+		&:focus
+			outline none
+			border-color lime
+		&::-webkit-input-placeholder
+			color gray
+		&::-moz-placeholder
+			color gray
+		&:-moz-placeholder
+			color gray
+		&:-ms-input-placeholder
+			color gray
+
+	&__textarea
+		width 100%
+		max-width 100%
+		min-width 100%
+		height 95px
+		min-height 95px
+		max-height 95px
+		padding 10px 15px
