@@ -1,0 +1,37 @@
+.touch-panel
+	display block
+	fixed top 0px right 0
+	z-index 1100
+	width 320px
+	max-width 100%
+	height 100vh
+	overflow hidden
+	overflow-y scroll
+	transition all .3s
+	background-color #fff
+
+
+	&__container
+		padding-top 20px
+		padding-bottom 20px
+		width 100%
+		max-width 100%
+		min-height 100vh
+		transition all .3s
+		display flex
+		align-items center
+		flex-direction column
+
+	&_pos_right
+		border-left 1px solid black
+		right -120%
+
+		&.touch-panel_showed
+			right 0
+
+	&_pos_left
+		border-right 1px solid black
+		left -120%
+
+		&.touch-panel_showed
+			left 0

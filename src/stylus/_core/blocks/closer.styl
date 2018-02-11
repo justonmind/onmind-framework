@@ -1,0 +1,19 @@
+.closer
+	display block
+	position relative
+	width 30px
+	height 30px
+	cursor pointer
+
+	&__line
+		height 2px
+		width 100%
+		background-color #fff
+		position absolute
+		top 50%
+		margin-top -1px
+
+		&_one
+			transform rotateZ(45deg)
+		&_two
+			transform rotateZ(-45deg)

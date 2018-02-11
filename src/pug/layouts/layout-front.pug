@@ -1,0 +1,65 @@
+include ../_core/core
+doctype html
+html(lang='en')
+	head
+		include layout-parts/meta
+		+nl()
+		
+		// title starts
+		block title
+		// title ends
+		+nl()
+
+		include layout-parts/favicon
+		+nl()
+
+		include layout-parts/styles
+	+nl()
+	+nl()
+	
+		
+
+	body.site-page#site-page
+		
+		
+		// main header starts
+		header.page-header#page-header
+			block header
+		// main header ends
+		+nl()
+		
+		// main content starts
+		main.page-main#page-main
+			block main-content
+		// main content ends
+		+nl()
+		
+		// main footer starts
+		footer.page-footer#page-footer
+			block footer
+		// main footer ends
+		+nl()
+		
+		// button to top starts
+		block totop
+		// button to top ends
+		+nl()
+		
+		// overlay starts
+		block overlay
+		// overlay ends
+		+nl()
+		
+		// touch panel starts
+		block touch-panel
+		// touch panel ends
+		+nl()
+		
+		// modal popups start
+		block modals
+		// modal popups end
+		+nl()
+
+		include layout-parts/scripts
+		
+		script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCJhDRXQmaiDkn_kyO2sr-0vzSHbZqnz_4&callback=initMap')

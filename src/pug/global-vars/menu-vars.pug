@@ -1,0 +1,17 @@
+//- -
+	var testmenu = {
+		mainClass: 'menu',
+		mixClasses: 'header__menu menu-desktop',
+		subClass: 'menu-dropdown',
+		mixSubClasses: '',
+		items: [
+			{anchor:'Main', attr:{href:'index.html'}, mixedClasses: 'active'},
+			{anchor:'Item 1 top level', attr:{href:'item1top.html'}, sub: [
+				{anchor:'Item 1-1 sub level', attr:{href:'item1sub.html'}},
+				{anchor:'Item 1-2 sub level', attr:{href:'item2sub.html'}, mixedClasses: 'active'},
+				{anchor:'Item 1-3 sub level', attr:{href:'item3sub.html'}}
+			]},
+			{anchor:'Item 2 top level', attr:{href:'item2top.html'}},
+			{anchor:'Item 3 top level', attr:{href:'item3top.html'}}
+		]
+	}

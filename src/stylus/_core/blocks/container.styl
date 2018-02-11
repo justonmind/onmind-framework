@@ -1,0 +1,19 @@
+.container
+	margin 0 auto
+	container()
+	&_no-large-paddings
+		+over(breakPointMedium)
+			padding-left 0
+			padding-right 0
+	&_no-medium-paddings
+		+amid(breakPointSmall, breakPointMedium)
+			padding-left 0
+			padding-right 0
+	&_no-small-paddings
+		+amid(breakPointTiny,breakPointSmall)
+			padding-left 0
+			padding-right 0
+	&_no-tiny-paddings
+		+under(breakPointTiny)
+			padding-left 0
+			padding-right 0

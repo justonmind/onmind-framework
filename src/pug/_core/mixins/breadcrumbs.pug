@@ -1,0 +1,35 @@
+//- mixin breadcrumbs
+//- params:
+
+//-
+	- 																							// must be
+	
+		var cardCrumbs = {
+			id: 'breadcrumbs',
+			mainClass: 'breadcrumbs',								// main class
+			mixClasses: 'page-main__breadcrumbs',		// mixed main classes
+			lastCrumb: 'Last Crumb',								// last crumb
+			items: [
+				{anchor:'Crumb 0', attr:{href:'#'}},
+				{anchor:'Crumb 1', attr:{href:'#'}},
+				{anchor:'Crumb 2', attr:{href:'#'}},
+				{anchor:'Crumb 3', attr:{href:'#'}},
+			]
+		};
+		
+		items
+			anchor 				- link anchor 								(string)
+			attr 					- (html) attributes for link 	(object)
+			
+
+
+mixin breadcrumbs(opt)
+	// breadcrumbs start
+	ul(class= opt.mainClass, class= opt.mixClasses, id= opt.id)
+		each crumb in opt.items
+			li(class= opt.mainClass + '__item')
+				+ws()
+				a(class= opt.mainClass + '__link')&attributes(crumb.attr)= crumb.anchor
+		li(class= opt.mainClass + '__item ' + opt.mainClass + '__item_last' )= opt.lastCrumb
+	// breadcrumbs end
+	+nl()

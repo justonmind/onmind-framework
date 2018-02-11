@@ -1,0 +1,56 @@
+.modal
+	display block
+	width 360px
+	max-width 90vw
+	max-height 70vh
+	fixed top 50% left 50%
+	transform translate(-50%, -50%)
+	z-index 1100
+	opacity 0
+	visibility hidden
+	transition .3s
+
+	&__content
+		background #fff
+		border 1px solid black
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		flex-direction column
+		width 100%
+		position relative
+		padding 25px 20px 30px
+		+under(990)
+			padding 15px 10px 20px
+
+	&__closer.closer
+		width 15px
+		height 15px
+		absolute top 10px right 10px
+		z-index 10
+		.closer__line
+			height 1px
+			background-color black
+
+	&__caption
+		font(arial, 25px, 30px, black)
+		padding 0
+		margin 0
+		margin-bottom 25px
+		text-align center
+		+under(990)
+			font-size 20px
+			line-height 25px
+
+	&_fx_scale
+		.modal__content
+			transition .3s
+			transform scale(0.01)
+
+	&_showed
+		opacity 1
+		visibility visible
+
+		&.modal_fx_scale
+			.modal__content
+				transform scale(1)

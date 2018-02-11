@@ -1,0 +1,30 @@
+extends layouts/layout-front.pug
+
+block title
+	title Головна | El Nav
+	
+
+block header
+	include regions/header
+
+block main-content
+	include regions/index/slider
+	include regions/index/news-previews
+	include regions/index/catalog
+	include regions/index/info
+		
+block footer
+	include regions/footer
+	
+block overlay
+	include blocks/overlay
+	
+block totop
+	include blocks/totop
+	
+block touch-panel
+	include blocks/touch-panel
+	
+block modals
+	include blocks/modal
+	

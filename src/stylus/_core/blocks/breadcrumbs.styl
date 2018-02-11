@@ -1,0 +1,29 @@
+.breadcrumbs
+	list-style-type none
+	padding 0
+	margin 0
+	display -webkit-flex
+	display -ms-flex
+	display flex
+	flex-wrap wrap
+
+	&__item
+		font arial 14px 21px black
+		margin-right 30px
+		position relative
+		&:after
+			content '/'
+			absolute top 0px right -17px
+
+		&_last
+			font arial 14px 21px black
+			margin-right 0
+			&:after
+				content ''
+
+	&__link
+
+		font arial 14px 21px black
+		text-decoration none
+		&:hover
+			color orange

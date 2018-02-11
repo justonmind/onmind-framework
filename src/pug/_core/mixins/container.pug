@@ -1,0 +1,9 @@
+//- mixin for creating a container
+//- params:
+//- 	classes ('string')	- adds classes
+//- example:
+//- 	container('container_no-tiny-paddings')
+mixin container(classes)
+	div.container(class= classes)
+		if block
+			block

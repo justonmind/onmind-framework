@@ -1,0 +1,64 @@
+//====================================
+//============CORE MIXINS=========+++=
+//====================================
+//	container mixin
+container()
+	width containerLargeWidth
+	padding-right clPaddingR
+	padding-left clPaddingL
+	+under(breakPointMedium)
+		width containerMediumWidth
+		padding-right cmPaddingR
+		padding-left cmPaddingL
+	+under(breakPointSmall)
+		width containerSmallWidth
+		padding-right csPaddingR
+		padding-left csPaddingL
+	+under(breakPointTiny)
+		width containerTinyWidth
+		padding-right ctPaddingR
+		padding-left ctPaddingL
+
+
+//====================================
+//=========TYPOGRAPHY MIXIN========+++=
+//====================================
+font(ff, fz, lh, clr)
+	font-family ff
+	font-size fz
+	line-height lh
+	color clr
+
+
+//====================================
+//===========MEDIA MIXINS=========+++=
+//====================================
+// max-width
+under(res)
+	@media screen and (max-width: res * 1px)
+		{block}
+
+// min-width
+over(res)
+	@media screen and (min-width: (res + 1) * 1px)
+		{block}
+
+// between min and max width
+amid(start, end)
+	@media screen and (min-width: (start + 1) * 1px) and (max-width: end * 1px)
+		{block}
+
+// max-height
+underh(res)
+	@media screen and (max-height: res * 1px)
+		{block}
+
+// min-height
+overh(res)
+	@media screen and (min-height: (res + 1) * 1px)
+		{block}
+
+// between min and max height
+amidh(start, end)
+	@media screen and (min-height: (start + 1) * 1px) and (max-height: end * 1px)
+		{block}
