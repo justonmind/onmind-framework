@@ -1,0 +1,56 @@
+//- Mixin for building pagination
+//- --------------------------------------------------------------------------//
+//-                             START TEMPLATE                                //
+//- --------------------------------------------------------------------------//
+//-
+//- ----------------------------put in CALL place------------------------------
+//-
+//- //- call mixin
+//-
+//- //- ARGUMENTS: 
+//- //-   id - id        											(string)
+//- //-   mixClasses - mixed classes        	(string)
+//- //-   item - amount of pagination items 	(integer) (>=3)
+//- //-   step - ON/OFF prev/next links     	(integer) (1|0)
+//- //-   stage - ON/OFF first/last links   	(integer) (1|0)
+//-
+//- +pagination(items, mixClasses, step, stage)
+//- +nl
+//-
+//- --------------------------------------------------------------------------//
+//-                               END TEMPLATE                                //
+//- --------------------------------------------------------------------------//
+
+
+mixin pagination(id, mixClasses, items, step, stage)
+	// pagination
+	ul(class='pagination', class= mixClasses)
+		if stage
+			li.pagination__item.pagination__item_stage
+				a(href="#").pagination__link.pagination__link_prev &lt;&lt;
+		if step
+			li.pagination__item.pagination__item_step
+				a(href="#").pagination__link.pagination__link_prev &lt;
+
+		li.pagination__item.pagination__item_active
+			a(href="#").pagination__link 1
+		
+		if items < 3
+				- items = 3;
+				
+		- items--;
+		- var i = 2 
+		
+		while items > 0
+			li.pagination__item
+				a(href="#").pagination__link #{i}
+			- i++;
+			- items--;
+			
+		if step
+			li.pagination__item.pagination__item_step
+				a(href="#").pagination__link.pagination__link_next &gt;
+		if stage
+			li.pagination__item.pagination__item_stage
+				a(href="#").pagination__link.pagination__link_next &gt;&gt;
+	// pagination ends
