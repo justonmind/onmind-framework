@@ -1,0 +1,16 @@
+//- mixin for link
+//- params:
+//- 	whitespase (1|0) 		- sets whether to use the whitespace "+ws()" or not
+//- 	classes ('string')	- adds classes
+//- 	href ('string')			- sets href
+//- 	anchor ('string')		- sets anchor
+//- 	attr (js object)		- set other attributes
+//- example:
+//- 	+link(1, 'link__class', 'http://site-link', 'Go to in site', {title:'click me', target:'_blank'})
+//- also can take a block
+mixin link(whitespase,classes,href, anchor, attr)
+	if whitespase
+		+ws()
+	a(class= classes, href= href)&attributes(attr)= anchor
+		if block
+			block

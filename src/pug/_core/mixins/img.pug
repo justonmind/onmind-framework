@@ -1,0 +1,14 @@
+//- mixin for image
+//- params:
+//- 	whitespase (1|0) 		- sets whether to use the whitespace "+ws()" or not
+//- 	classes ('string')	- adds classes
+//- 	src ('string')			- sets source
+//- 	alt ('string')			- sets alt attribute
+//- 	attr (js object)		- set other attributes
+//- example:
+//- 	+img(1, 'image__class', 'images/moon.jpg', 'MOON', {title:'I am a moon'})
+mixin img(whitespase, classes, src, alt, attr)
+	if whitespase
+		+ws()
+	img(class= classes, src= src, alt= alt)&attributes(attr)
+	
