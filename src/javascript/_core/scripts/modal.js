@@ -34,16 +34,6 @@
 			});
 
 			function additionalActions(thisObject) {
-				if ($(thisObject).attr('data-modal-caption')) {
-					$captionElement.text($(thisObject).attr('data-modal-caption'));
-				}
-				if ($(thisObject).attr('data-modal-reason')) {
-					$reasonInput.val($(thisObject).attr('data-modal-reason'));
-				}
-				if ($(thisObject).attr('data-modal-show-hidden') == 'true') {
-					$hiddenElements.css('display', 'flex');
-				} else {
-					$hiddenElements.css('display', 'none');
-				}
+				// put your code here
 			}
 		})();
