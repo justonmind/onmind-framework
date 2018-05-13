@@ -3,18 +3,19 @@
 	width 360px
 	max-width 90vw
 	max-height 70vh
-	fixed top 50% left 50%
+	position fixed
+	top 50%
+	left 50%
 	transform translate(-50%, -50%)
 	z-index 1100
 	opacity 0
 	visibility hidden
 	transition .3s
+	// background transparent
 
-	&__content
+	&__container
 		background #fff
 		border 1px solid black
-		display -webkit-flex
-		display -ms-flex
 		display flex
 		flex-direction column
 		width 100%
@@ -26,7 +27,9 @@
 	&__closer.closer
 		width 15px
 		height 15px
-		absolute top 10px right 10px
+		position absolute 
+		top 10px
+		right 10px
 		z-index 10
 		.closer__line
 			height 1px
@@ -43,7 +46,7 @@
 			line-height 25px
 
 	&_fx_scale
-		.modal__content
+		.modal__container
 			transition .3s
 			transform scale(0.01)
 
@@ -52,5 +55,5 @@
 		visibility visible
 
 		&.modal_fx_scale
-			.modal__content
+			.modal__container
 				transform scale(1)

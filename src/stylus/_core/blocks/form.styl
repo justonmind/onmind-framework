@@ -37,7 +37,7 @@
 			margin-bottom 0
 		&:focus
 			outline none
-			border-color lime
+			// border-color lime
 		&::-webkit-input-placeholder
 			color gray
 		&::-moz-placeholder
@@ -45,6 +45,8 @@
 		&:-moz-placeholder
 			color gray
 		&:-ms-input-placeholder
+			color gray
+		&:placeholder
 			color gray
 
 	&__textarea
@@ -55,3 +57,12 @@
 		min-height 95px
 		max-height 95px
 		padding 10px 15px
+
+		&::-webkit-input-placeholder
+			color gray
+		&::-moz-placeholder
+			color gray
+		&:-moz-placeholder
+			color gray
+		&:-ms-input-placeholder
+			color gray
