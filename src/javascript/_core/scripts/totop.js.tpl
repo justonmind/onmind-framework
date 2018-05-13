@@ -3,6 +3,7 @@
 			var $totop = $('#totop');
 			var isScrolling = false;
 			var scrollThreshold = 100;
+			var scrollDuration = 600;
 			var showedClass = 'totop_showed';
 
 			$(window).on('scroll', function() {
@@ -17,7 +18,7 @@
 				e.preventDefault();
 				if (!isScrolling) {
 					isScrolling = true;
-					$(window).animate({scrollTop: 0}, 800, function() {
+					$("html, body").animate({scrollTop: 0}, scrollDuration, function() {
 						isScrolling = false;
 					});
 				}

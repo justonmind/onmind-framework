@@ -1,4 +1,4 @@
-		// menu.js
+// touch-menu.js
 		(function() {
 			var $menu 						=	$('#touch-menu');
 			var $items 						=	$('.touch-menu__item:has(.touch-menu-dropdown)', $menu);

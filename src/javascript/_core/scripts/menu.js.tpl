@@ -3,7 +3,7 @@
 			var $menu 				= $('#menu');
 			var $items 				= $('.menu__item:has(.menu-dropdown)', $menu);
 			var $links 				= $('.menu__link', $items);
-			var slideTime 		= 250;
+			var slideTime 		= 200;
 			var slideTimeout 	= 800;
 			var hoveredClass	= 'menu__item_hovered';
 			var timer;

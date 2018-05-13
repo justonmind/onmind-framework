@@ -5,8 +5,8 @@
 			var $closers 						=	$('.touch-panel--nerve--closer')
 																	.add('#overlay');
 			var $overlay 						=	$('#overlay');
-			var $page 							=	$('#page-header');
-			var pageFixedClass 			=	'page-header_fixed';
+			var $page 							=	$('#page');
+			var pageFixedClass 			=	'page_fixed';
 			var showedPanelClass 		=	'touch-panel_showed';
 			var showedOverlayClass 	=	'overlay_showed';
 			var closingDelay 				= 300;
