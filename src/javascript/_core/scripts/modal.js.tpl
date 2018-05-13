@@ -5,15 +5,12 @@
 			var $closers 								= $('.modal-order--nerve--closer')
 																		.add('#overlay');
 			var $overlay 								= $('#overlay');
-			var $page 									= $('#site-page');
-			var pageFixedClass 					= 'site-page_fixed';
+			var $page 									= $('#page');
+			var pageFixedClass 					= 'page_fixed';
 			var showedModalClass 				= 'modal_showed';
 			var showedTouchPanelClass 	= 'touch-panel_showed';
 			var showedOverlayClass 			= 'overlay_showed';
 			var closingDelay 						= 300;
-			var $captionElement					= $('.modal__caption', $modal);
-			var $reasonInput						= $('input[name=reason]', $modal);
-			var $hiddenElements					= $('.form__input-group_hidden', $modal);
 			var $touchPanel							= $('#touch-panel');
 
 			$openers.on('click', function(e) {
